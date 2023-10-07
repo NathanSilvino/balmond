@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Methods Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    h2 {
+      color: #555;
+    }
+
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Array Methods Demo</h1>
+
+  <h2>Array Length</h2>
+  <button onclick="showArrayLength()">Get Array Length</button>
+  <p id="arrayLengthResult"></p>
+
+  <h2>Array toString()</h2>
+  <button onclick="showArrayToString()">Convert to String</button>
+  <p id="arrayToStringResult"></p>
+
+  <h2>Array pop()</h2>
+  <button onclick="popFromArray()">Pop Last Element</button>
+  <p id="popResult"></p>
+
+  <script>
+    // Sample array
+    var myArray = ["Apple", "Banana", "Cherry", "Date"];
+
+    // Function to show array length
+    function showArrayLength() {
+      var result = myArray.length;
+      document.getElementById("arrayLengthResult").textContent = "Array Length: " + result;
+    }
+
+    // Function to show array as a string
+    function showArrayToString() {
+      var result = myArray.toString();
+      document.getElementById("arrayToStringResult").textContent = "Array as String: " + result;
+    }
+
+    // Function to pop the last element from the array
+    function popFromArray() {
+      var poppedElement = myArray.pop();
+      document.getElementById("popResult").textContent = "Popped Element: " + poppedElement;
+    }
+  </script>
+</body>
+</html>
